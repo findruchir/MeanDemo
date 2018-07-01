@@ -1,0 +1,39 @@
+
+
+<!-- <app-employee-count [all]="getAllEmployees()" [male]="getMaleEmployees()" [female]="getFemaleEmployees()"></app-employee-count> -->
+
+<h3>Employee Detail page</h3>
+
+<table style="width: 60%; margin-top: 20px" id="rowby">
+  <thead>
+  <tr>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Salary</th>
+    <th>Company</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- <tr *ngFor=" let emp of employees">
+    <td><a [routerLink]="['/employee',emp.code,emp.name]">{{emp.code}}</a></td>
+    <td>{{emp.name | employeeTitle:emp.gender}}</td>
+    <td>{{emp.gender}}</td>
+    <td>{{emp.salary | currency:'INR'}}</td>
+    <td>{{emp.company}}</td>
+  </tr> -->
+  <tr>
+    <td>{{ID}}</td>
+    <td>{{name}}</td>
+    <td>{{gender}}</td>
+    <td>{{salary}}</td>
+    <td>{{company}}</td>
+  </tr>
+  </tbody>
+</table>
+<button type="button" id="btn_goBack" (click)="goBack()" class="btn btn-success">Go Back</button>
+
+<div style="margin-top: 15px;">
+    <label>Color Preferences :  </label>
+    <input type="text" [(ngModel)]='color' [style.background]="color"  />
+  </div>

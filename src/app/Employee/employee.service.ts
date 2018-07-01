@@ -1,0 +1,71 @@
+import { Injectable } from '@angular/core';
+import {Subject} from 'rxjs';
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class EmployeeService {
+
+  mySubject$ = new Subject<any>();
+
+  employees : any[] = [
+    {
+      code : 'emp01',
+      name : 'Arun Gopan',
+      gender : 'male',
+      salary : 10000,
+      company : 'Marlabs'
+    },
+    {
+      code : 'emp02',
+      name : 'Harshal Shah',
+      gender : 'male',
+      salary : 10000,
+      company : 'Marlabs'
+    },
+    {
+      code : 'emp03',
+      name : 'grag stephen',
+      gender : 'male',
+      salary : 440000,
+      company : 'Google'
+    },
+    {
+      code : 'emp04',
+      name : 'Robert voyzer',
+      gender : 'male',
+      salary : 1000,
+      company : 'Rang'
+    },
+    {
+      code : 'emp05',
+      name : 'Lucci benten',
+      gender : 'female',
+      salary : 3200,
+      company : 'Protek'
+    },
+    {
+      code : 'emp06',
+      name : 'Rita robert',
+      gender : 'female',
+      salary : 5400,
+      company : 'Marlabs'
+    },
+    {
+      code : 'emp07',
+      name : 'stephen lucci',
+      gender : 'male',
+      salary : 55430,
+      company : 'google'
+    },
+  ];
+  constructor() { }
+    getalldata(){
+      return this.employees;
+    }
+
+    login(email){
+      this.mySubject$.next(email);
+    }
+} 
